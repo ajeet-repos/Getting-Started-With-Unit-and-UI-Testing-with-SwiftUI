@@ -15,6 +15,7 @@
 		51BE68D024A83A9000DD323F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BE68CE24A83A9000DD323F /* LaunchScreen.storyboard */; };
 		51BE68DB24A83A9000DD323F /* Simple_App_To_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE68DA24A83A9000DD323F /* Simple_App_To_TestTests.swift */; };
 		51BE68E624A83A9000DD323F /* Simple_App_To_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE68E524A83A9000DD323F /* Simple_App_To_TestUITests.swift */; };
+		51FF03C824A8D6A3000E77A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BE68C724A83A8D00DD323F /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -285,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51FF03C824A8D6A3000E77A6 /* ContentView.swift in Sources */,
 				51BE68E624A83A9000DD323F /* Simple_App_To_TestUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

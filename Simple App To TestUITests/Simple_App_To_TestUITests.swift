@@ -8,36 +8,33 @@
 
 import XCTest
 
+@testable import Simple_App_To_Test
+
 class Simple_App_To_TestUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
+    func testButtonClick() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
-        }
+        
+        // Find the button in the UI based on button's text
+        let button = app.buttons["Click Me!"].firstMatch
+        button.tap()
+        
+        /**
+                 We can use the below code also for the same purpose.
+                 But the above code is more optimised in terms of performance.
+                 It might not matter in a simple app like this, but could save
+                 a lot of time in a complex UI
+                 */
+        //        app.buttons["Click Me!"].tap()
+        
+        let str = "Random text 1"
+        let textView = app.staticTexts[str]
+        
+        // If the text ran successfully, the the above textView will be != Nil
+        XCTAssertEqual(textView.exists, true)
+        
+        
     }
 }

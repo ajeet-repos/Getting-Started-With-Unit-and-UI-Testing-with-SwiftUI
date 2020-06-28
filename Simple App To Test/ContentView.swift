@@ -8,10 +8,42 @@
 
 import SwiftUI
 
+var counter = 0
+
 struct ContentView: View {
+    
+    @State var placeholderText: String = "Placeholder Text"
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Button(action: {
+                
+                self.placeholderText = calculateRandomString()
+                
+                }, label: {
+                    HStack {
+                        Text("Click Me!")
+                            .fontWeight(.semibold)
+                            .font(.title)
+                    }
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(20)
+                })
+            Text(placeholderText)
+            .padding(20)
+        }
     }
+}
+
+
+func calculateRandomString() -> String {
+    
+    counter += 1
+    
+    return "Random text " + String(counter)
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
