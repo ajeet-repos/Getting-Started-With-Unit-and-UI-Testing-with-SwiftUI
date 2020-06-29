@@ -8,8 +8,6 @@
 
 import XCTest
 
-@testable import Simple_App_To_Test
-
 class Simple_App_To_TestUITests: XCTestCase {
 
     func testButtonClick() throws {

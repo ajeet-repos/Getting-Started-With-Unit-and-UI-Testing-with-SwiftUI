@@ -8,8 +8,11 @@
 
 import SwiftUI
 
+// Just a counter variable
 var counter = 0
 
+
+// This is the method responsible for creating the UI for the app
 struct ContentView: View {
     
     @State var placeholderText: String = "Placeholder Text"
@@ -37,7 +40,7 @@ struct ContentView: View {
     }
 }
 
-
+// Return a string along with counter attached to it.
 func calculateRandomString() -> String {
     
     counter += 1

@@ -14,7 +14,7 @@ class Simple_App_To_TestTests: XCTestCase {
     func testCalculateRandomString() throws {
         counter = 2
         let str = calculateRandomString()
-        XCTAssertTrue(str == "Random text " + String(counter))
+        XCTAssertTrue(str == "Random text 3")
     }
 
 }
